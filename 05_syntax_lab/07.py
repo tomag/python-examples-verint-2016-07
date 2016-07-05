@@ -1,8 +1,15 @@
-""" Write a program that selects a random number
-and asks the user to guess it.
-
-After each guess print a hint "too large" or "too small" to the user.
-
-Bonus: To make things interesting, the program should cheat once in a white
 """
+"""
+from random import randint
 
+number = randint(1,100)
+
+print "Pick a number [1-100]"
+picked = int(raw_input())
+while (picked != number):
+    sizeDiff = "smaller" if picked < number else "larger"
+    print "The number you picked is {}!".format(sizeDiff)
+    print
+    print "Pick a number [1-100]"
+    picked = int(raw_input())
+print "You guess it right!"
