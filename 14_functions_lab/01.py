@@ -1,7 +1,21 @@
 """
-Write 2 functions:
-    mysum - returns the sum of its input arguments
-    mymul - returns the multiplication of its input arguments
-    Ignore non-numeric arguments
 """
 
+def mysum(*numbers):
+    sum = 0
+    for number in numbers:
+        if type(number) is int: 
+            sum += number
+    return sum
+
+def mymul(*numbers):
+    mul = 1
+    for number in numbers:
+        if type(number) is int:
+            mul *= number
+    return mul
+
+print mysum(1,2,3)
+print mysum(1,2,"t",5)
+print mymul()
+print mymul('foo', 'bla', 10, 20)
